@@ -1,17 +1,17 @@
     {{-- If Active change color to black --}}
     
     <div class="d-flex flex-column flex-lg-shrink-0 sidebar-custom" style="width: 4.5rem;">
-        <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" title="Strange Thing" data-bs-toggle="tooltip" data-bs-placement="right">
-            <box-icon name='heart-circle' animation='burst-hover'></box-icon>
-        </a>
         <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+            <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right">
+                <box-icon name='heart-circle' animation='burst-hover' color="red"></box-icon>
+            </a>
             <li class="nav-item">
-                <a href="#" class="nav-link py-3 border-bottom rounded-0 {{ $title === 'Home' ? 'active' : ''}}" title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
+                <a href="/" class="nav-link py-3 border-bottom rounded-0 {{ $title === 'Home' ? 'active' : ''}}" title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
                     <box-icon name='home-heart' type='solid' color='{{ $title === 'Home' ? 'purple' : 'yellow'}}' animation='tada-hover'></box-icon>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link py-3 border-bottom rounded-0 {{ $title === 'Story' ? 'active' : ''}}" title="Story" data-bs-toggle="tooltip" data-bs-placement="right">
+                <a href="/story" class="nav-link py-3 border-bottom rounded-0 {{ $title === 'Story' ? 'active' : ''}}" title="Story" data-bs-toggle="tooltip" data-bs-placement="right">
                     <box-icon name='book-heart' color='{{ $title === 'Story' ? 'purple' : 'yellow'}}' animation='tada-hover'></box-icon>
                 </a>
             </li>

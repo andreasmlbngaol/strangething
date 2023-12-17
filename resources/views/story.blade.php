@@ -36,7 +36,7 @@
 @section('picture')
     <div class="bg-pictures text-centerp-1 m-0 rounded d-flex overflow-x-auto align-items-center" style="height: 42vh; width: 100%">
         @foreach ($pictures as $picture)
-        <div class="col-2 px-2 my-2" style="width: 30%; height: 90%;">
+        <div class="col-2 px-2 my-2" style="width: 32%; height: 90%;">
             <div class="border rounded bg-picture p-2 d-flex justify-content-center picture">
                 <a href="{{ asset("palette/$picture") }}" target="_blank">
                     <img src="{{ asset("palette/$picture") }}" alt="" style="max-height: 34vh; max-width: 22vw">
@@ -44,7 +44,7 @@
             </div>
         </div>
         @endforeach
-        <div class="col-2 px-2 my-2" style="width: 30%; height: 90%;">
+        <div class="col-2 px-2 my-2" style="width: 32%; height: 90%;">
             <div class="border rounded bg-picture p-2 d-flex justify-content-center">
                 <a href="">
                     <box-icon name='plus-circle' size="lg" animation="tada-hover" style="height: 34vh"></box-icon>

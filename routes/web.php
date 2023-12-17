@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => 'viewport.check'], function () {
+    Route::get('/', function () {
+
+        return view('welcome', [
+            'title' => 'Home',
+        ]);
+    });
 });
+

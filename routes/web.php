@@ -10,6 +10,23 @@ Route::group(['middleware' => 'viewport.check'], function () {
     });
     Route::get('/story', function () {
         $pictures = ["palette 1.png", "palette 2.png", "palette 3.png", "palette 4.png"];
+        $andre_detail = 'Ini awal mula kita yang sebenarnya. bermula dari "Happy new year😂" semuanya. Pas banget ya u chatnya jam 00.00.;
+        Disini aku bilang liat u di Psi yang dadah dadah itu. Ternyata itu sebelum kita kenalan dengan benar ya wkwk. Aku dah sedari awal ngatain u wibu ternyata ya.;
+        Ternyata aku di sini yang manjangin ya, pake nanya asal lagi wkwkwkwkwkwk. Tapi di bohongin aku hmm, dibilang orang Medan no fek fek, tapi fek. Walau dibenerin sih akhirnya gimana.;
+        Apa sih aku di zaman ini ih jomblo akut ini pasti dah berapa lama aku gak dekat cewek ini heh.;
+        Disini jokes kita nyambung banget ya dulu.;
+        Dengan bodohnya manusia penuh kekurangan ini ingin mengakhiri chat di sini. Lanjut Andre tolol ih, bego beut.;
+        Hati siapa yang u sudah dapat kan di jam 01.04 ini ha?;
+        Eheh malah perang sticker pulak 2 ini, padahal aku mau berangkat ke Medan besoknya, naik motor 💀;
+        Malah betulan lanjut bah 2 sejoli ini gak ngerti lagi aku. Malah ngomongin orang gila hadeuh;
+        Apa apaan ini jam 01.39 dah di sayang sayang i aku, buaya eh paus biru.;
+        Sangat membanggakan Psikologinya dia bah.;
+        02.06 Ngajak call langsung, boleh gitu emang?;
+        03.09 Disini bahkan u sampe kasih tau tempat mu dimana bah.;
+        03.30 Keknya ada masalah sama gender sebelumnya ini sampe ngomong gini dan sampe ambil topik kesgen;
+        03.35 aku udah tercandu candu nih sekarang gimana dong?;
+        03.55 Siap chat dengan Gnite dan bubayy.';
+        $andre_detail = str_replace(';', '</p><p class="mb-1">', $andre_detail);
         function formatDate($date) {
             $month_str = substr($date, 5, 2);
             switch ($month_str) {
@@ -26,17 +43,16 @@ Route::group(['middleware' => 'viewport.check'], function () {
                 case '11': $month = 'November'; break;
                 case '12': $month = 'Desember'; break;
             }
-            $day = substr($date, 8, 2);
+            $day = (string) ((int) substr($date, 8, 2));
             $year = substr($date, 0, 4);
             return "$day  $month  $year";
         }
         return view('story', [
             'title' => 'Story',
-            'andre_detail' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus, officia ex praesentium repellat vel eveniet quae cupiditate atque ipsum omnis neque, laboriosam, repellendus aperiam delectus velit cumque dolore blanditiis illo dolores deleniti sunt quaerat tempora! Id voluptate corporis suscipit, dolores nulla beatae ea nemo fugit earum accusantium cumque quis odit architecto illo fugiat eum. Vel, minima eaque error ad natus libero ipsam repellendus sapiente a officiis, in ipsa dolorum non praesentium! Optio officia pariatur enim labore suscipit nostrum quisquam maiores perferendis repudiandae. Reiciendis ipsa cumque at, mollitia animi ipsum inventore excepturi omnis velit autem in, quisquam et. Error culpa quo repellendus quas asperiores dignissimos et, ducimus, unde quaerat quasi mollitia necessitatibus sequi doloribus officia alias ipsa dolore, iure ex sint eos ullam soluta debitis rerum! Dolor laborum sit magni dicta delectus ab tempore earum saepe soluta aut placeat totam corporis, commodi fugiat aperiam sunt minus rerum explicabo. Culpa, ratione.
-            ',
-            'lisa_detail' => 'Lorem150',
-            'event_title' => 'Introduction',
-            'event_date' => formatDate('2022-11-10'),
+            'andre_detail' => $andre_detail,
+            'lisa_detail' => '',
+            'event_title' => 'Introduction Part 2',
+            'event_date' => formatDate('2023-01-01'),
             'pictures' => $pictures,
         ]);
     });
